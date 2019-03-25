@@ -164,7 +164,19 @@ for (let i = 0; i < bondFilms.length; i++) {
 	}
 }
 console.log(oddBonds);
+//7.
+let cumGross = 0;
+console.log(bondFilms[0].gross);
+for (let i = 0; i < bondFilms.length; i++) {
+	bondFilms[i].gross = bondFilms[i].gross.replace("$", ""); 
+	bondFilms[i].gross = bondFilms[i].gross.replace(",", "");
+	bondFilms[i].gross = bondFilms[i].gross.replace(",", "");
+	bondFilms[i].gross = bondFilms[i].gross.replace(",", "");
+	cumGross = cumGross + parseInt(bondFilms[i].gross);
 
+
+}
+console.log(cumGross);
 
 
 
